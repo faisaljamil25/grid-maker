@@ -1,0 +1,153 @@
+/* GLOBAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --gridRows: 1;
+  --gridCols: 1;
+}
+
+body {
+  background: url("../img/mountain.jpg");
+  background-size: cover;
+  background-position: top;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding: 3rem;
+  letter-spacing: 1rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  padding-bottom: 1rem;
+  font-weight: normal;
+}
+
+/* INDEX SECTION */
+
+#grid-input {
+  margin: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.form-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section form {
+  padding: 3rem 10rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 30px 60px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-section form input {
+  width: 25%;
+  margin: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.form-section form input:focus {
+  outline: none;
+}
+
+.form-section form label {
+  font-size: 2.4rem;
+}
+
+.form-section form button {
+  width: 75%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: transparent;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.form-section form button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* GRID SECTION */
+
+#grid {
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(var(--gridCols), minmax(0, 1fr));
+}
+
+.grid-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  background: rgb(129, 129, 218);
+}
+
+#chain {
+  padding: 1rem 4rem;
+  margin: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.24);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#chain:focus {
+  border-radius: 0;
+}
+
+.chain-header {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chain-header h1 {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .form-section form {
+    padding: 0;
+    width: 100%;
+  }
+}
